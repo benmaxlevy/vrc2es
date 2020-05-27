@@ -27,6 +27,9 @@ namespace vrc2es_runway2runway_
 
         private void Convert(object sender, RoutedEventArgs e)
         {
+
+            MessageBox.Show("Please make sure you input the runways in the same format as this example: \"04  22  49  229 N031.43.54.226 W086.16.03.254 N031.44.27.755 W086.15.26.395; 04A - FRANK SIKES\"!", "VRC2ES(RUNWAY2RUNWAY) - BEN LEVY", MessageBoxButton.OK, MessageBoxImage.Information);
+
             es.Text = "";
 
             String text = vrc.Text;
@@ -50,9 +53,7 @@ namespace vrc2es_runway2runway_
                 if (all[i].ToString().Length >= 10)
                 {
                     //fix apt icao code
-
-
-                    if(all[i].ToString()[76] == '1' || all[i].ToString()[76] == '2' || all[i].ToString()[76] == '3' || all[i].ToString()[76] == '4' || all[i].ToString()[76] == '5' || all[i].ToString()[76] == '6' || all[i].ToString()[76] == '7' || all[i].ToString()[76] == '8' || all[i].ToString()[76] == '9' || all[i].ToString()[76] == '0' || all[i].ToString()[76] == 'X')
+                    if(all[i].ToString()[76] == '1' || all[i].ToString()[76] == '2' || all[i].ToString()[76] == '3' || all[i].ToString()[76] == '4' || all[i].ToString()[76] == '5' || all[i].ToString()[76] == '6' || all[i].ToString()[76] == '7' || all[i].ToString()[76] == '8' || all[i].ToString()[76] == '9' || all[i].ToString()[76] == '0' || all[i].ToString()[76] == 'X' || all[i].ToString()[76] == 'S')
                     {
 
                     } 
@@ -60,6 +61,11 @@ namespace vrc2es_runway2runway_
                     {
                         all[i] = all[i].ToString().Insert(76, "K");
                     }
+
+                    //add space between "-"
+
+                    all[i] = all[i].ToString().Insert(all[i].IndexOf('-'), " ");
+                    all[i] = all[i].ToString().Insert(all[i].IndexOf('-')+1, " ");
 
                     if (all[i].ToString()[8] == '0' || all[i].ToString()[8] == '1' || all[i].ToString()[8] == '2' || all[i].ToString()[8] == '3' || all[i].ToString()[8] == '4' || all[i].ToString()[8] == '5' || all[i].ToString()[8] == '6' || all[i].ToString()[8] == '7' || all[i].ToString()[8] == '8' || all[i].ToString()[8] == '9')
                     {
