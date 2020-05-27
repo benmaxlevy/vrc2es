@@ -1,0 +1,72 @@
+﻿<Window x:Class="acars.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:acars"
+        mc:Ignorable="d"
+        Title="Redemption Virtual Airline ACARS" Height="450" Width="800"
+		ResizeMode="NoResize"
+		WindowStyle="None"
+		AllowsTransparency="True"
+        MouseDown="window"
+		>
+    <Window.Background>
+        <SolidColorBrush Color="#525252" Opacity="0.80"/>
+    </Window.Background>
+
+    <Grid Opacity="1">
+        <Rectangle Opacity=".80" Fill="#171718" HorizontalAlignment="Left" Height="532" Stroke="#1C1C1C" VerticalAlignment="Top" Width="151" Margin="0,-50,0,-32"/>
+        <Button Content="Test Connection" HorizontalAlignment="Left" Margin="-1,406,0,0" VerticalAlignment="Top" Width="152" Click="Button_Click" FontWeight="Bold" RenderTransformOrigin="1.478,-2.05" Height="44">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.001"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.001"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Test Connection" HorizontalAlignment="Left" Margin="-1,362,0,0" VerticalAlignment="Top" Width="152" Click="Button_Click" FontWeight="Bold" RenderTransformOrigin="1.478,-2.05" Height="44">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.001"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.001"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Test Connection" HorizontalAlignment="Left" Margin="-1,317,0,0" VerticalAlignment="Top" Width="152" Click="Button_Click" FontWeight="Bold" RenderTransformOrigin="1.478,-2.05" Height="44">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.001"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.001"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Test Connection" HorizontalAlignment="Left" Margin="-1,272,0,0" VerticalAlignment="Top" Width="152" Click="Button_Click" FontWeight="Bold" RenderTransformOrigin="1.478,-2.05" Height="44">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.001"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.001"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Test Connection" HorizontalAlignment="Left" Margin="-1,226,0,0" VerticalAlignment="Top" Width="152" Click="Button_Click" FontWeight="Bold" RenderTransformOrigin="1.478,-2.05" Height="44">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.001"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.001"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Window>
