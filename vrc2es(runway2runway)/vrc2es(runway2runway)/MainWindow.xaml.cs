@@ -35,7 +35,7 @@ namespace vrc2es_runway2runway_
             String text = vrc.Text;
             text = text.Replace(";", "");
 
-            if(text.Length < 10)
+            if (text.Length < 10)
             {
                 MessageBox.Show("Please make sure you're inputing at least 1 entry from the [RUNWAY] section in your VRC SCT2.", "VRC2ES(RUNWAY2RUNWAY) - BEN LEVY", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -45,27 +45,26 @@ namespace vrc2es_runway2runway_
 
             all = text.Split('\n').ToList();
 
-            
 
-            for (int i = 0; i<all.ToArray().Length; i++) 
+
+            for (int i = 0; i < all.ToArray().Length; i++)
             {
 
                 if (all[i].ToString().Length >= 10)
                 {
                     //fix apt icao code
-                    if(all[i].ToString()[76] == '1' || all[i].ToString()[76] == '2' || all[i].ToString()[76] == '3' || all[i].ToString()[76] == '4' || all[i].ToString()[76] == '5' || all[i].ToString()[76] == '6' || all[i].ToString()[76] == '7' || all[i].ToString()[76] == '8' || all[i].ToString()[76] == '9' || all[i].ToString()[76] == '0' || all[i].ToString()[76] == 'X' || all[i].ToString()[76] == 'S')
+                    if (all[i].ToString()[76] == '1' || all[i].ToString()[76] == '2' || all[i].ToString()[76] == '3' || all[i].ToString()[76] == '4' || all[i].ToString()[76] == '5' || all[i].ToString()[76] == '6' || all[i].ToString()[76] == '7' || all[i].ToString()[76] == '8' || all[i].ToString()[76] == '9' || all[i].ToString()[76] == '0' || all[i].ToString()[76] == 'X' || all[i].ToString()[76] == 'S')
                     {
 
-                    } 
+                    }
                     else
                     {
                         all[i] = all[i].ToString().Insert(76, "K");
                     }
 
                     //add space between "-"
-
                     all[i] = all[i].ToString().Insert(all[i].IndexOf('-'), " ");
-                    all[i] = all[i].ToString().Insert(all[i].IndexOf('-')+1, " ");
+                    all[i] = all[i].ToString().Insert(all[i].IndexOf('-') + 1, " ");
 
                     if (all[i].ToString()[8] == '0' || all[i].ToString()[8] == '1' || all[i].ToString()[8] == '2' || all[i].ToString()[8] == '3' || all[i].ToString()[8] == '4' || all[i].ToString()[8] == '5' || all[i].ToString()[8] == '6' || all[i].ToString()[8] == '7' || all[i].ToString()[8] == '8' || all[i].ToString()[8] == '9')
                     {
@@ -74,14 +73,14 @@ namespace vrc2es_runway2runway_
 
                             if (all[i].ToString()[10] == '0' || all[i].ToString()[10] == '1' || all[i].ToString()[10] == '2' || all[i].ToString()[10] == '3' || all[i].ToString()[10] == '4' || all[i].ToString()[10] == '5' || all[i].ToString()[10] == '6' || all[i].ToString()[10] == '7' || all[i].ToString()[10] == '8' || all[i].ToString()[10] == '9')
                             {
-                                
+
                             }
                             else
                             {
                                 all[i] = all[i].Insert(7, " 0");
                                 all[i] = all[i].Remove(9, 1);
                                 all[i] = all[i].Remove(11, 1);
-                                
+
                             }
 
                         }
@@ -136,7 +135,7 @@ namespace vrc2es_runway2runway_
 
 
             }
-           
+
         }
     }
 }
