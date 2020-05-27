@@ -46,8 +46,21 @@ namespace vrc2es_runway2runway_
 
             for (int i = 0; i<all.ToArray().Length; i++) 
             {
+
                 if (all[i].ToString().Length >= 10)
                 {
+                    //fix apt icao code
+
+
+                    if(all[i].ToString()[76] == '1' || all[i].ToString()[76] == '2' || all[i].ToString()[76] == '3' || all[i].ToString()[76] == '4' || all[i].ToString()[76] == '5' || all[i].ToString()[76] == '6' || all[i].ToString()[76] == '7' || all[i].ToString()[76] == '8' || all[i].ToString()[76] == '9' || all[i].ToString()[76] == '0' || all[i].ToString()[76] == 'X')
+                    {
+
+                    } 
+                    else
+                    {
+                        all[i] = all[i].ToString().Insert(76, "K");
+                    }
+
                     if (all[i].ToString()[8] == '0' || all[i].ToString()[8] == '1' || all[i].ToString()[8] == '2' || all[i].ToString()[8] == '3' || all[i].ToString()[8] == '4' || all[i].ToString()[8] == '5' || all[i].ToString()[8] == '6' || all[i].ToString()[8] == '7' || all[i].ToString()[8] == '8' || all[i].ToString()[8] == '9')
                     {
                         if (all[i].ToString()[9] == '0' || all[i].ToString()[9] == '1' || all[i].ToString()[9] == '2' || all[i].ToString()[9] == '3' || all[i].ToString()[9] == '4' || all[i].ToString()[9] == '5' || all[i].ToString()[9] == '6' || all[i].ToString()[9] == '7' || all[i].ToString()[9] == '8' || all[i].ToString()[9] == '9')
