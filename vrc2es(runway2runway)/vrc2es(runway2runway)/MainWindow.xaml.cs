@@ -112,8 +112,7 @@ namespace vrc2es_runway2runway_
                         else
                         {
                             all[i] = all[i].Insert(11, " 0");
-                            all[i] = all[i].Remove(14, 1);
-                            all[i] = all[i].Remove(16, 2);
+                            all[i] = all[i].Remove(13, 1);
                             es.Text += all[i];
                         }
 
@@ -124,7 +123,6 @@ namespace vrc2es_runway2runway_
                         all[i] = all[i].Remove(14, 1);
                         all[i] = all[i].Remove(16, 2);
                         es.Text += all[i];
-
                     }
                 }
                 else
